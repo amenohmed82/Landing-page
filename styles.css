@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --color-bg-pri: hsl(218, 28%, 13%);
+  --color-bg-sec: hsl(217, 28%, 15%);
+  --color-bg-fot: hsl(216, 53%, 9%);
+  --color-bg-tes: hsl(219, 30%, 18%);
+  --color-acc-pri: hsl(176, 68%, 64%);
+  --color-acc-sec: hsl(198, 60%, 50%);
+  --color-red: hsl(0, 100%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-pri: clamp(0.8rem, 1vw, 1.2rem);
+  --font-sec: clamp(1rem, 2vw, 1.5rem);
+  --font-header: clamp(1.8rem, 2.5vw, 1.5rem);
+  --font-w-normal: 400;
+  --font-w-bold: 700;
+  --font-fm-rale: "Raleway", sans-serif;
+  --font-f-opn: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+  background-color: var(--color-bg-pri);
+  font-size: var(--font-pri);
+  font-family: var(--font-f-opn);
+  color: var(--color-white);
+}
+
+p {
+  font-size: var(--font-sec);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-fm-rale);
+  font-weight: var(--font-w-bold);
+  font-size: var(--font-header);
+}
+
+ul {
+  list-style-type: none;
+  font-size: var(--font-sec);
+  margin: 0;
+}
+
+span {
+  margin-right: 1em;
+}
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+img {
+  max-width: 100%;
+}
+section {
+  padding: 4em 0;
+}
+
+.container {
+  width: min(90%, 1400px);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.3em 5em;
+  border-radius: 100px;
+  font-weight: var(--font-w-bold);
+  background-color: var(--color-acc-sec);
+  color: var(--color-white);
+}
+
+/* Layout */
+
+.nav {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+/* intro */
+.intro {
+  text-align: center;
+}
+
+/* middle */
+
+.middle {
+  text-align: center;
+}
+
+.middle_content {
+  padding: 2em 0;
+}
+
+/* productive */
+.productive {
+  text-align: center;
+}
+.section__link {
+  color: var(--color-acc-pri);
+  position: relative;
+}
+
+.section__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1em;
+  display: block;
+  width: 80%;
+  background-color: var(--color-acc-pri);
+  height: 2px;
+}
+.arrow {
+  margin: 0 1em;
+  color: var(--color-bg-tes);
+  border-radius: 100px;
+  background: var(--color-acc-pri);
+}
+
+/* reviews */
+.reviews {
+  padding: 10em 0;
+}
+.card {
+  font-size: var(--font-pri);
+  background-color: var(--color-bg-sec);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  transform: translateY(-5%);
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.card__img img {
+  width: 40px;
+  border-radius: 40px;
+}
+
+.card__name p {
+  margin: 0;
+}
+
+/* footer  */
+
+footer {
+  background: var(--color-bg-fot);
+}
+
+.footer__contact {
+  background: var(--color-bg-pri);
+  text-align: center;
+  padding: 2em;
+  transform: translateY(-30%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
+.f-btn {
+  display: block;
+  width: 100%;
+  padding: 1.5em 0;
+  border-radius: 100px;
+  margin-bottom: 1em;
+  border: none;
+}
+
+input[type="email"] {
+  text-indent: 20px;
+  font-size: var(--font-pri);
+  font-weight: var(--font-w-bold);
+}
+
+.footer__container {
+  font-size: var(--font-sec);
+  padding-bottom: 2em;
+}
+
+.footer__logo img {
+  width: 40%;
+  margin-bottom: 2em;
+}
+.col,
+.col__content {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 976px) {
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .middle-col {
+    display: flex;
+    gap: 50px;
+  }
+
+  .middle_content {
+    width: 70%;
+  }
+
+  .section__img {
+    flex: 1;
+  }
+
+  .section__content {
+    flex: 1;
+    text-align: left;
+  }
+  .footer__contact {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .footer__container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer__logo img {
+    width: 10%;
+  }
+
+  .col,
+  .col__content {
+    flex: 1;
+    margin-right: auto;
+  }
+
+  .footer__container .col:first-child {
+    flex: 2;
+  }
+}
